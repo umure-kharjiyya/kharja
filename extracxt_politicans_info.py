@@ -1,6 +1,4 @@
-import json
 import requests
-import extract_mdl_selenium
 from bs4 import BeautifulSoup
 
 
