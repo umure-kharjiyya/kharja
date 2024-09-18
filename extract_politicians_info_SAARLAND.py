@@ -68,7 +68,7 @@ if __name__ == "__main__":
     mdl_info_list = extract_mdl_info()
     if mdl_info_list:
         # Daten in eine Excel-Datei speichern
-        save_to_excel(mdl_info_list)
+        # save_to_excel(mdl_info_list)
         print(f"{len(mdl_info_list)} Einträge gefunden.")
     else:
         print("Keine Einträge gefunden.")
