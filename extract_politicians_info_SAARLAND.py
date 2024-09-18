@@ -46,7 +46,8 @@ def extract_mdl_info():
             nachname = ""
 
         # Ergebnisse zur Liste hinzufügen
-        mdl_info_list.append({
+        if 'AFD' not in fraktion and fraktion != 'Unbekannt':
+            mdl_info_list.append({
             'Nachname': nachname,
             'Vorname': vorname,
             'Fraktion': fraktion,
@@ -67,7 +68,7 @@ if __name__ == "__main__":
     mdl_info_list = extract_mdl_info()
     if mdl_info_list:
         # Daten in eine Excel-Datei speichern
-        # save_to_excel(mdl_info_list)
+        save_to_excel(mdl_info_list)
         print(f"{len(mdl_info_list)} Einträge gefunden.")
     else:
         print("Keine Einträge gefunden.")
